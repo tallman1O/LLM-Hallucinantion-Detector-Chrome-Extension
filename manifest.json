@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "LLM Hallucination Detector",
+    "version": "1.0.0",
+    "description": "Chrome extension detecting LLM hallucinations in the response from LLM Models like ChatGPT, Claude, Gemini, etc.",
+    "permissions": ["storage"],
+    "action": {
+      "default_popup": "index.html"
+    },
+  
+    "content_scripts": [
+      {
+        "js": ["src/content.tsx"],
+        "matches": ["https://chatgpt.com/*"]
+      }
+    ]
+  }
