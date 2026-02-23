@@ -47,12 +47,12 @@ export default function ContentPage() {
       {hasResponse && (
         <button
           type="button"
-          className="fixed bottom-6 right-6 z-2147483645 flex h-[52px] w-[52px] items-center justify-center rounded-full border border-[#2a2a2e] bg-[#18181c] text-2xl font-light text-[#e4e4e7] shadow-lg transition-all hover:scale-105 hover:border-[#a78bfa] hover:bg-[#2a2a2e] focus:border-[#a78bfa] focus:outline-none"
+          className={`fixed ${!isPanelOpen ? "animate-pulse" : ""} bottom-6 right-6 z-2147483645 flex h-[52px] w-[52px] items-center justify-center rounded-full border border-[#2a2a2e] bg-[#18181c] text-2xl font-light text-[#e4e4e7] shadow-lg transition-all hover:scale-105 hover:border-[#a78bfa] hover:bg-[#2a2a2e] focus:border-[#a78bfa] focus:outline-none ${isPanelOpen ? 'bg-[#a78bfa]' : ''}`}
           onClick={onToggle}
           aria-expanded={isPanelOpen}
           aria-label={isPanelOpen ? 'Close analysis panel' : 'Open analysis panel'}
         >
-          {isPanelOpen ? '−' : '+'}
+          {isPanelOpen ? '👀' : '🧠'}
         </button>
       )}
       {hasResponse && isPanelOpen && (
