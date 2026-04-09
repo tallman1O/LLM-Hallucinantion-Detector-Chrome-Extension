@@ -1,7 +1,8 @@
-cat << EOF > .gitignore
+.env
 venv/
 __pycache__/
 *.db
 data/
 *.gguf
-EOF
+.DS_Store
+kb_embeddings.json

@@ -1,8 +1,11 @@
 fastapi
 uvicorn
-sentence-transformers
 faiss-cpu
 numpy
 scikit-learn
 requests
 llama-cpp-python
+transformers
+torch
+adapters
+spacy
